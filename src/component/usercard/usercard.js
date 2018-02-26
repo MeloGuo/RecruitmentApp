@@ -16,6 +16,7 @@ class UserCard extends React.Component {
   render () {
     const Header = Card.Header
     const Body = Card.Body
+    console.log(this.props.userlist[0])
     return (
       <WingBlank>
         {this.props.userlist.map(v => (
@@ -29,9 +30,9 @@ class UserCard extends React.Component {
               {v.type === 'boss'
                 ? <div>公司:{v.company}</div>
                 : null}
-              {v.desc.split('\n').map(v => (
+              {v.desc ? v.desc.split('\n').map(v => (
                 <div key={v}>{v}</div>
-              ))}
+              )) : null}
               {v.type === 'boss'
                 ? <div>薪资:{v.money}</div>
                 : null}
