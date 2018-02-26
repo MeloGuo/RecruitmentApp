@@ -111,7 +111,9 @@ class Chat extends Component {
               }}
               extra={
 								<div>
-									<span
+                  <span
+                    role='img'
+                    aria-label='face'              
 										style={{marginRight:15}}
 										onClick={()=>{
 											this.setState({

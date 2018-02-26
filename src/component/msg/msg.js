@@ -41,8 +41,8 @@ class Msg extends Component {
       <div>
         {this.props.chatList.map(v => {
           const lastItem = this.getLast(v)
-          const targetId = v[0].from==userid?v[0].to:v[0].from
-          const unreadNum = v.filter(v=>!v.read&&v.to==userid).length
+          const targetId = v[0].from === userid ? v[0].to : v[0].from
+          const unreadNum = v.filter(v => !v.read && v.to === userid).length
           if (!userinfo[targetId]) {
             return null
           }

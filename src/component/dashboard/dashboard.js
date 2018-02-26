@@ -1,7 +1,7 @@
 import React from 'react'
 import {NavBar} from 'antd-mobile'
 import {connect} from 'react-redux'
-import {Route, Switch} from 'react-router-dom'
+import {Route} from 'react-router-dom'
 import NavLinkBar from '../navlink/navlink'
 import Boss from '../../component/boss/boss'
 import Genius from '../../component/genius/genius'
