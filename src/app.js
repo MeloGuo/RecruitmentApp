@@ -21,8 +21,8 @@ class App extends React.Component {
   }
 
   render () {
-    // return this.state.hasError ? <h2>页面出错了!!!</h2> :
-    return (<div>
+    return this.state.hasError ? <h2>页面出错了!!!</h2>
+    : (<div>
       <AuthRoute />
       <Switch>
         <Route path='/bossinfo' component={BossInfo} />
