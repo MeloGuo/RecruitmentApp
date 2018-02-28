@@ -17,6 +17,7 @@ class App extends React.Component {
   }
 
   componentDidCatch (err, info) {
+    if (err) {}
     this.setState({hasError: true})
   }
 

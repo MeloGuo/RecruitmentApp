@@ -5,12 +5,6 @@ import {withRouter} from 'react-router-dom'
 
 @withRouter
 class UserCard extends React.Component {
-  constructor(props) {
-    super(props);
-    console.log('constructor:',this.props)
-  }
-  
-
   static propTypes = {
     userlist: PropTypes.array.isRequired
   }
@@ -23,9 +17,13 @@ class UserCard extends React.Component {
     const Header = Card.Header
     const Body = Card.Body
     return (
+      <div>
       <WingBlank>
         {this.props.userlist.map(v => (
-          v.avatar ? (<Card key={v._id} onClick={() => this.handleClick(v)}>
+          v.avatar ? (
+          <div key={v._id}>
+          <WhiteSpace size='sm' />
+          <Card onClick={() => this.handleClick(v)}>
             <Header
               title={v.user}
               thumb={require(`../img/${v.avatar}.png`)}
@@ -42,9 +40,12 @@ class UserCard extends React.Component {
                 ? <div>薪资:{v.money}</div>
                 : null}
             </Body>
-          </Card>) : null
+          </Card>
+          </div>
+          ) : null
         ))}
       </WingBlank>
+      </div>
     )
   }
 }
